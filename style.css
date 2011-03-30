@@ -1,0 +1,35 @@
+body {
+    background-color: #222;
+    color: #bbb;
+    font:11pt "lucida grande",tahoma,verdana,arial,sans-serif;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#aboutus {
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+    font-size: .8em;
+}
+
+#splash {
+    position: fixed;
+    width: 400px;
+    height: 300px;
+    font-size: 1.5em;
+    margin-top: -150px;
+    margin-left: -200px;
+    left: 50%;
+    top: 40%;
+    border: 10px solid #111;
+    padding: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background-color: #444;
+    text-align: center;
+}
