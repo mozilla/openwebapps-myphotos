@@ -5,5 +5,11 @@
     "128": "/i/pic_128.png",
     "48": "/i/pic_48.png",
     "16": "/i/pic_16.png"
-  }
+  },
+  "experimental": {
+    "services": [
+      { "image.send": "/image.send.html" }
+    ]
+  },
+  "installs_allowed_from": [ "*" ]
 }
