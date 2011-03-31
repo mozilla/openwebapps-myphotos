@@ -59,3 +59,14 @@ a {
 strong.sucks {
     color: red;
 }
+
+body img {
+    max-width: 200px;
+    max-height: 200px;
+    margin: 20px;
+    float: left;
+    border: 6px solid #ccc;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
