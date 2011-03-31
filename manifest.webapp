@@ -1,0 +1,9 @@
+{
+  "name": "My Photos",
+  "description": "A little tiny app that I can store photos to",
+  "icons": {
+    "128": "/i/pic_128.png",
+    "48": "/i/pic_48.png",
+    "16": "/i/pic_16.png"
+  }
+}

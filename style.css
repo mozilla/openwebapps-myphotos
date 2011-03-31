@@ -32,4 +32,28 @@ a {
     border-radius: 10px;
     background-color: #444;
     text-align: center;
+    display: none;
+}
+
+#toolbar {
+    font-size: .8em;
+    position: fixed;
+    height: 40px;
+    margin-top: -40px;
+    width: 600px;
+    margin-left: -300px;
+    top: 0px;
+    left: 50%;
+    background-color: #000;
+    border-bottom-right-radius : 10px;
+    -moz-border-radius-bottomright : 10px;
+    -webkit-border-bottom-right-radius : 10px;
+    border-bottom-left-radius : 10px;
+    -moz-border-radius-bottomleft : 10px;
+    -webkit-border-bottom-left-radius : 10px;
+
+}
+
+strong.sucks {
+    color: red;
 }
