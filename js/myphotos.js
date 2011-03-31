@@ -20,7 +20,33 @@ var Message = (function() {
 })();
 
 
+function startApp() {
+    $("#toolbar #numpics").text(localStorage.length); 
+    $("#toolbar").animate({ 'margin-top': "0px" });
+    
+    var i = 0;
+    function addOne() {
+        if (i >= localStorage.length) return;
+        var o = localStorage.getItem(localStorage.key(i));
+        try {
+            o = JSON.parse(o);
+            var img = $("<img/>");
+            img.attr('src', "data:" + o.mimeType + ";base64," + o.data);
+            $('body').append(img);
+            i++;
+            img.load(function() { addOne(); });
+        }
+        catch(e)
+        {
+            localStorage.removeItem(localStorage.key(i));
+            addOne();
+        }
+    }
+    addOne();
+}
+
 $(document).ready(function() {
+
     Message.show(
         $('<p>This is a little tiny <a href="https://apps.mozillalabs.com">open web application</a>: it can ' +
           'store photos for you.  Once you install the app, other sites that produce photos (like the ' + 
@@ -30,7 +56,7 @@ $(document).ready(function() {
         function() {
             navigator.apps.amInstalled(function(r) {
                 if (r) {
-                    $("#toolbar").animate({ 'margin-top': "0px" });
+                    startApp();
                 } else {
                     var html = $("<p><strong>Step 1:</strong>  You should <a href='#'>click here</a> to install this site into your " +
                                  "browser.</p>");
@@ -41,7 +67,7 @@ $(document).ready(function() {
                                 {
                                     url: "/manifest.webapp",
                                     onsuccess: function (rv) {
-                                        $("#toolbar").animate({ 'margin-top': "0px" });
+                                        startApp();
                                     },
                                     onerror: function (errObj) {
                                         var html = $("<p><strong class='sucks'>DAMN!</strong>  Something went horribly wrong [" +
