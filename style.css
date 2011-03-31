@@ -38,10 +38,10 @@ a {
 #toolbar {
     font-size: .8em;
     position: fixed;
-    height: 40px;
+    height: 20px;
     margin-top: -40px;
-    width: 600px;
-    margin-left: -300px;
+    width: 300px;
+    margin-left: -150px;
     top: 0px;
     left: 50%;
     background-color: #000;
@@ -51,7 +51,9 @@ a {
     border-bottom-left-radius : 10px;
     -moz-border-radius-bottomleft : 10px;
     -webkit-border-bottom-left-radius : 10px;
-
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 strong.sucks {

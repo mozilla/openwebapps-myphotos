@@ -30,7 +30,7 @@ $(document).ready(function() {
         function() {
             navigator.apps.amInstalled(function(r) {
                 if (r) {
-                    alert("you're installed!");
+                    $("#toolbar").animate({ 'margin-top': "0px" });
                 } else {
                     var html = $("<p><strong>Step 1:</strong>  You should <a href='#'>click here</a> to install this site into your " +
                                  "browser.</p>");
@@ -41,7 +41,7 @@ $(document).ready(function() {
                                 {
                                     url: "/manifest.webapp",
                                     onsuccess: function (rv) {
-                                        console.log("awesome");
+                                        $("#toolbar").animate({ 'margin-top': "0px" });
                                     },
                                     onerror: function (errObj) {
                                         var html = $("<p><strong class='sucks'>DAMN!</strong>  Something went horribly wrong [" +
